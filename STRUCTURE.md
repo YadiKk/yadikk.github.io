@@ -1,21 +1,21 @@
-# Portfolio Structure
+# Project Structure
 
-Bu dosya, portföyün yeni düzenlenmiş klasör yapısını açıklar.
+This document outlines the organized folder structure of the portfolio website.
 
-## 📁 Klasör Yapısı
+## Folder Organization
 
 ```
 MyPortfolio/
-├── index.html                 # Ana sayfa (MAIN)
-├── 404.html                   # 404 hata sayfası
-├── assets/                    # Tüm statik dosyalar
+├── index.html                 # Main portfolio page
+├── 404.html                   # 404 error page
+├── assets/                    # Static files
 │   ├── css/
-│   │   └── styles.css         # Ana CSS dosyası
+│   │   └── styles.css         # Main stylesheet
 │   ├── js/
-│   │   └── script.js          # Ana JavaScript dosyası
+│   │   └── script.js          # Main JavaScript file
 │   └── images/
-│       ├── projects/          # Proje görselleri
-│       │   └── Photos/        # Eski Photos klasörü
+│       ├── projects/          # Project images
+│       │   └── Photos/        # Legacy Photos folder
 │       │       ├── Car of cube/
 │       │       ├── DeveloperStory/
 │       │       ├── EcoState/
@@ -23,22 +23,22 @@ MyPortfolio/
 │       │       ├── RandomKey/
 │       │       ├── Tuana/
 │       │       └── TWD/
-│       └── ui/                # UI görselleri (gelecekte kullanım için)
-├── projects/                  # Proje sayfaları
-│   ├── professional/          # Profesyonel projeler
+│       └── ui/                # UI assets (for future use)
+├── projects/                  # Project pages
+│   ├── professional/          # Professional projects
 │   │   ├── ecostate.html
 │   │   ├── solid-plane.html
 │   │   └── temporal-warfare.html
-│   └── experimental/          # Deneysel projeler
+│   └── experimental/          # Experimental projects
 │       ├── car-of-cube.html
 │       ├── developers-story.html
 │       ├── online-tank2d.html
 │       └── random-key.html
-├── docs/                      # Dokümantasyon
+├── docs/                      # Documentation
 │   ├── README.md
 │   ├── DEPLOYMENT.md
 │   └── YadullaM_CV .pdf
-├── config/                    # Konfigürasyon dosyaları
+├── config/                    # Configuration files
 │   ├── CNAME
 │   ├── package.json
 │   ├── robots.txt
@@ -46,39 +46,39 @@ MyPortfolio/
 └── .git/                      # Git repository
 ```
 
-## 🎯 Ana Dosyalar
+## Main Files
 
-- **`index.html`** - Ana portföy sayfası (MAIN)
-- **`404.html`** - 404 hata sayfası
+- **`index.html`** - Main portfolio page
+- **`404.html`** - 404 error page
 
-## 📂 Klasör Açıklamaları
+## Folder Descriptions
 
 ### `/assets/`
-Tüm statik dosyalar (CSS, JS, görseller) burada organize edilmiştir.
+Contains all static files (CSS, JavaScript, images) organized by type.
 
 ### `/projects/`
-Proje sayfaları iki kategoriye ayrılmıştır:
-- **`professional/`** - Profesyonel projeler
-- **`experimental/`** - Deneysel projeler
+Project pages are categorized into two main sections:
+- **`professional/`** - Professional game projects
+- **`experimental/`** - Experimental and learning projects
 
 ### `/docs/`
-Dokümantasyon dosyaları (README, deployment guide, CV)
+Documentation files including README, deployment guide, and CV.
 
 ### `/config/`
-Web sitesi konfigürasyon dosyaları
+Website configuration files for deployment and SEO.
 
-## 🔗 Link Güncellemeleri
+## File Paths
 
-Tüm dosya yolları yeni yapıya göre güncellenmiştir:
+All file references have been updated to match the new structure:
 - CSS: `assets/css/styles.css`
 - JS: `assets/js/script.js`
-- Proje sayfaları: `projects/professional/` ve `projects/experimental/`
-- Görseller: `assets/images/projects/Photos/`
+- Project pages: `projects/professional/` and `projects/experimental/`
+- Images: `assets/images/projects/Photos/`
 
-## ✅ Avantajlar
+## Benefits
 
-1. **Düzenli Yapı** - Her dosya türü kendi klasöründe
-2. **Kolay Bakım** - Dosyaları bulmak ve düzenlemek daha kolay
-3. **Profesyonel Görünüm** - Temiz ve organize klasör yapısı
-4. **Ölçeklenebilirlik** - Yeni projeler ve dosyalar kolayca eklenebilir
-5. **SEO Dostu** - Daha iyi URL yapısı
+1. **Clean Organization** - Each file type has its own dedicated folder
+2. **Easy Maintenance** - Files are easy to locate and update
+3. **Professional Structure** - Clean and organized folder hierarchy
+4. **Scalable** - Easy to add new projects and files
+5. **SEO Friendly** - Better URL structure for search engines

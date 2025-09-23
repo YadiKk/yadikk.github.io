@@ -1,70 +1,48 @@
-# Yadulla Mirzayev - Unity Game Developer Portfolio
+# Yadulla Mirzayev - Game Developer Portfolio
 
-Modern ve responsive bir oyun geliştirici portföyü. Unity, C#, Python ve C++ kullanarak geliştirilmiş oyunlar ve projeler.
+Welcome to my portfolio! I'm a Unity game developer from Baku, Azerbaijan, passionate about creating immersive gaming experiences.
 
-## 🎮 Projeler
+## About This Portfolio
 
-### Profesyonel Projeler
-- **EcoState** - Çevresel simülasyon oyunu
-- **Solid Plane** - Fizik tabanlı uçuş simülasyonu
-- **Temporal Warfare** - Zaman manipülasyonu strateji oyunu
+This is my personal portfolio website showcasing various game development projects I've worked on. The site features both professional and experimental games built with Unity, C#, Python, and C++.
 
-### Diğer Projeler
-- **Car of Cube** - 3D yarış oyunu
-- **Developer's Story** - Etkileşimli hikaye deneyimi
-- **Random Key** - Prosedürel puzzle oyunu
-- **Online Tank2D** - Çok oyunculu tank savaşı
+## Featured Projects
 
-## 🛠️ Teknolojiler
+**Professional Games:**
+- **EcoState** - Environmental simulation game focused on sustainability
+- **Solid Plane** - Physics-based flight simulation with realistic aerodynamics  
+- **Temporal Warfare** - Time manipulation strategy game
 
-- **Unity Engine** - Birincil oyun motoru
-- **C#** - Ana programlama dili
-- **Python** - Veri analizi ve AI
-- **C++** - Performans kritik sistemler
-- **JavaScript** - Web entegrasyonu
+**Experimental Projects:**
+- **Car of Cube** - 3D racing game with unique cube mechanics
+- **Developer's Story** - Interactive narrative experience
+- **Random Key** - Procedural puzzle game
+- **Online Tank2D** - Multiplayer tank battle game
 
-## 📍 Konum
-Baku, Azerbaijan
+## Technologies Used
 
-## 📧 İletişim
-- **Kişisel Email**: yadullamirzeyev5@gmail.com
-- **Studio Email**: yadikkgamestudio@gmail.com
+- Unity Engine (2D & 3D)
+- C# for game logic
+- Python for data analysis
+- C++ for performance-critical systems
+- JavaScript for web integration
 
-## 🌐 Sosyal Medya
+## Contact
+
+Feel free to reach out if you'd like to collaborate or have any questions about my work.
+
+- **Personal**: yadullamirzeyev5@gmail.com
+- **Studio**: yadikkgamestudio@gmail.com
+- **Location**: Baku, Azerbaijan
+
+## Social Links
+
 - [LinkedIn](https://linkedin.com/in/yadulla-mirzayev)
 - [GitHub](https://github.com/yadikk)
 - [Itch.io](https://yadikk.itch.io)
 - [YouTube](https://youtube.com/@yadikk)
 - [Instagram](https://instagram.com/yadikk.dev)
 
-## 🚀 Deployment
-
-Bu proje GitHub Pages üzerinde host edilmektedir.
-
-### GitHub Pages Kurulumu
-1. Repository'yi GitHub'a yükleyin
-2. Settings > Pages bölümüne gidin
-3. Source olarak "Deploy from a branch" seçin
-4. Branch olarak "main" seçin
-5. Custom domain ayarlayın (isteğe bağlı)
-
-### Domain Bağlama
-1. CNAME dosyası oluşturun ve domain adresinizi ekleyin
-2. DNS ayarlarında GitHub Pages'e yönlendirme yapın:
-   - Type: CNAME
-   - Name: www (veya @)
-   - Value: [username].github.io
-
-## 📄 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır.
-
-## 🤝 Katkıda Bulunma
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
-
 ---
 
-© 2024 Yadulla Mirzayev. Tüm hakları saklıdır.
+© 2024 Yadulla Mirzayev. All rights reserved.
