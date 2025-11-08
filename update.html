@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly a Plane 3D — Updates | YadiKk Games</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .update-section {
+            min-height: 100vh;
+            padding-top: 100px;
+            padding-bottom: var(--spacing-4xl);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+        }
+
+        .update-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.08) 0%, transparent 25%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .update-container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl);
+            background: rgba(26, 26, 46, 0.95);
+            border: var(--border-thin) solid var(--border-color);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+        }
+
+        .update-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .update-title {
+            font-size: var(--font-size-4xl);
+            color: var(--accent-primary);
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px var(--bg-secondary);
+        }
+
+        .version-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
+            padding: var(--spacing-lg);
+            background: rgba(14, 52, 96, 0.5);
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .version-item {
+            padding: var(--spacing-md);
+        }
+
+        .version-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .version-value {
+            font-size: var(--font-size-xl);
+            color: var(--accent-primary);
+            font-weight: bold;
+            text-shadow: 1px 1px 0px var(--bg-secondary);
+        }
+
+        .changelog-section {
+            margin-top: var(--spacing-2xl);
+            padding: var(--spacing-lg);
+            background: rgba(14, 52, 96, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .changelog-title {
+            font-size: var(--font-size-xl);
+            color: var(--accent-secondary);
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .changelog-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: var(--font-size-base);
+        }
+
+        .release-date {
+            margin-top: var(--spacing-xl);
+            text-align: right;
+            color: var(--text-muted);
+            font-size: var(--font-size-sm);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: var(--font-size-base);
+            margin-top: var(--spacing-2xl);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid var(--accent-primary);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
+        }
+
+        .update-footer {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--text-muted);
+            font-size: var(--font-size-sm);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            margin-top: var(--spacing-2xl);
+        }
+
+        @media (max-width: 768px) {
+            .update-container {
+                margin: var(--spacing-md);
+                padding: var(--spacing-xl);
+            }
+
+            .update-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .version-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YadiKk</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="update-section">
+        <div class="update-container">
+            <header class="update-header">
+                <h1 class="update-title">Fly a Plane 3D — Updates</h1>
+            </header>
+
+            <div class="version-info">
+                <div class="version-item">
+                    <div class="version-label">Latest Version</div>
+                    <div id="latest-version" class="version-value"></div>
+                </div>
+                <div class="version-item">
+                    <div class="version-label">Critical Version</div>
+                    <div id="critical-version" class="version-value"></div>
+                </div>
+            </div>
+
+            <div class="changelog-section">
+                <h2 class="changelog-title">Changelog</h2>
+                <p id="changelog-text" class="changelog-text"></p>
+                <div class="release-date">
+                    Released: <span id="release-date"></span>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+
+            <footer class="update-footer">
+                © 2025 YadiKk Games — Powered by Hersai Studio
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('update.json');
+                if (!response.ok) throw new Error('Failed to fetch update data');
+                
+                const data = await response.json();
+                
+                document.getElementById('latest-version').textContent = data.latestVersion;
+                document.getElementById('critical-version').textContent = data.criticalVersion;
+                document.getElementById('changelog-text').textContent = data.changelog;
+                
+                const releaseDate = new Date(data.releaseDate);
+                const formattedDate = releaseDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                document.getElementById('release-date').textContent = formattedDate;
+            } catch (error) {
+                console.error('Error loading update data:', error);
+                document.getElementById('changelog-text').textContent = 'Error loading update information. Please try again later.';
+            }
+        });
+    </script>
+</body>
+</html>
