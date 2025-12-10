@@ -1156,7 +1156,8 @@ section::before {
 
 .project-image-container {
     width: 100%;
-    height: 200px;
+    min-height: 120px;
+    height: auto;
     background: var(--bg-tertiary);
     border-radius: 12px;
     overflow: hidden;
@@ -1170,9 +1171,25 @@ section::before {
 
 .project-preview {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    display: block;
     transition: all 0.3s ease;
+}
+
+/* Restore original index card image behavior for the homepage cards */
+.home .project-image-container {
+    /* original fixed height for index cards */
+    height: 200px;
+    min-height: 0;
+}
+
+.home .project-preview {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
 }
 
 .modern-card:hover .project-image-container {
@@ -1478,11 +1495,13 @@ section::before {
     }
     
     .project-image-container {
-        height: 150px;
+        min-height: 120px;
+        height: auto;
     }
     
     .project-iframe-container {
-        height: 150px;
+        min-height: 120px;
+        height: auto;
     }
 }
 
@@ -1548,10 +1567,21 @@ section::before {
     }
     
     .project-image-container {
-        height: 120px;
+        min-height: 100px;
+        height: auto;
     }
     
     .project-iframe-container {
-        height: 120px;
+        min-height: 100px;
+        height: auto;
     }
+}
+
+/* Responsive overrides for homepage cards */
+@media (max-width: 768px) {
+    .home .project-image-container { height: 150px; }
+}
+
+@media (max-width: 480px) {
+    .home .project-image-container { height: 120px; }
 }
