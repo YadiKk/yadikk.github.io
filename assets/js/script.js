@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
+                // Account for fixed nav - different heights on mobile
+                const navHeight = window.innerWidth <= 480 ? 55 : (window.innerWidth <= 768 ? 60 : 70);
+                const offsetTop = targetSection.offsetTop - navHeight;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -63,7 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70;
+                // Account for fixed nav - different heights on mobile
+                const navHeight = window.innerWidth <= 480 ? 55 : (window.innerWidth <= 768 ? 60 : 70);
+                const offsetTop = targetSection.offsetTop - navHeight;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
