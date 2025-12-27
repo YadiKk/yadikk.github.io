@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0f0f23" rx="4"/>
+  
+  <!-- Pixel art style "Y" letter -->
+  <g fill="#00d4ff">
+    <!-- Left part of Y -->
+    <rect x="16" y="12" width="6" height="6"/>
+    <rect x="16" y="18" width="6" height="6"/>
+    <rect x="16" y="24" width="6" height="6"/>
+    <rect x="22" y="18" width="6" height="6"/>
+    <rect x="22" y="24" width="6" height="6"/>
+    <rect x="28" y="24" width="6" height="6"/>
+    <rect x="28" y="30" width="6" height="6"/>
+    <rect x="28" y="36" width="6" height="6"/>
+    <rect x="28" y="42" width="6" height="6"/>
+    
+    <!-- Right part of Y -->
+    <rect x="42" y="12" width="6" height="6"/>
+    <rect x="42" y="18" width="6" height="6"/>
+    <rect x="42" y="24" width="6" height="6"/>
+    <rect x="36" y="18" width="6" height="6"/>
+    <rect x="36" y="24" width="6" height="6"/>
+    
+    <!-- Glow effect -->
+    <rect x="16" y="12" width="6" height="6" fill="#10b981" opacity="0.6"/>
+    <rect x="42" y="12" width="6" height="6" fill="#10b981" opacity="0.6"/>
+    <rect x="28" y="24" width="6" height="6" fill="#10b981" opacity="0.6"/>
+  </g>
+  
+  <!-- Border -->
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#00d4ff" stroke-width="2" rx="4"/>
+</svg>
+

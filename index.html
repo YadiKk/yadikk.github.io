@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yadulla Mirzayev - Game Developer Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -31,6 +37,42 @@
                 <h1 class="hero-title pixel-title">Yadulla Mirzayev</h1>
                 <p class="hero-description">Unity Game Developer from Baku, Azerbaijan</p>
             </div>
+            
+            <!-- Featured Game Banner -->
+            <div class="hero-featured-game">
+                <div class="featured-game-card">
+                    <div class="featured-game-image">
+                        <img src="assets/images/projects/Photos/FlyAPlane/Logo.png" alt="Fly a Plane 3D">
+                    </div>
+                    <div class="featured-game-content">
+                        <div class="featured-game-badge">
+                            <i class="fab fa-google-play"></i>
+                            <span>Available on Google Play</span>
+                        </div>
+                        <h2 class="featured-game-title">Fly a Plane 3D</h2>
+                        <p class="featured-game-description">
+                            Experience realistic flight simulation! Pilot various planes with authentic controls and challenging missions. 
+                            Now available on Google Play Store.
+                        </p>
+                        <div class="featured-game-buttons">
+                            <a href="https://play.google.com/store/apps/details?id=com.yadikkgames.flyaplane" 
+                               class="btn-featured btn-play-store" 
+                               target="_blank" 
+                               rel="noopener">
+                                <i class="fab fa-google-play"></i>
+                                <span>Get on Google Play</span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/dev?id=YadiKk+Games" 
+                               class="btn-featured btn-developer" 
+                               target="_blank" 
+                               rel="noopener">
+                                <i class="fas fa-user-circle"></i>
+                                <span>View All Games</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -44,10 +86,19 @@
             <!-- Play Store Releases Subsection -->
             <div class="projects-group">
                 <h3 class="projects-group-title">Play Store Releases</h3>
-                <div class="projects-grid" style="justify-content: center;">
-                    <a href="https://play.google.com/store/apps/details?id=com.yadikkgames.flyaplane" class="project-card modern-card" style="text-decoration:none;color:inherit;" target="_blank" rel="noopener">
+                <div class="projects-grid projects-grid-featured">
+                    <!-- Fly a Plane 3D - Featured in hero, but also shown here as featured card -->
+                    <a href="https://play.google.com/store/apps/details?id=com.yadikkgames.flyaplane" 
+                       class="project-card modern-card featured-playstore" 
+                       style="text-decoration:none;color:inherit;" 
+                       target="_blank" 
+                       rel="noopener">
                         <div class="project-image-container">
                             <img src="assets/images/projects/Photos/FlyAPlane/Logo.png" alt="Fly a Plane 3D Logo" class="project-preview">
+                            <div class="playstore-badge">
+                                <i class="fab fa-google-play"></i>
+                                <span>Google Play</span>
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Fly a Plane 3D</h3>
@@ -58,6 +109,7 @@
                                 <span class="tech-tag">Unity</span>
                                 <span class="tech-tag">C#</span>
                                 <span class="tech-tag">Mobile</span>
+                                <span class="tech-tag featured-tag">Featured</span>
                             </div>
                         </div>
                     </a>

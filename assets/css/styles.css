@@ -157,7 +157,7 @@ html {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,28 +165,99 @@ html {
     position: relative;
     text-align: center;
     padding-top: 70px;
+    padding-bottom: var(--spacing-4xl);
     overflow: hidden;
 }
 
 @media (max-width: 768px) {
     .hero {
         padding-top: 60px;
-        min-height: 80vh;
+        min-height: auto;
+        padding-bottom: var(--spacing-3xl);
+    }
+    
+    .hero-featured-game {
+        margin-top: var(--spacing-2xl);
+    }
+    
+    .featured-game-card {
+        flex-direction: column;
+        padding: var(--spacing-xl);
+        gap: var(--spacing-lg);
+    }
+    
+    .featured-game-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .featured-game-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .featured-game-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    .featured-game-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-featured {
+        width: 100%;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
         padding-top: 55px;
-        min-height: 70vh;
+        min-height: auto;
+        padding-bottom: var(--spacing-2xl);
+    }
+    
+    .hero-featured-game {
+        margin-top: var(--spacing-xl);
+    }
+    
+    .featured-game-card {
+        padding: var(--spacing-lg);
+        border-width: 2px;
+    }
+    
+    .featured-game-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .featured-game-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .featured-game-description {
+        font-size: 12px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .featured-game-badge {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .btn-featured {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 12px;
     }
 }
 
 
 .hero-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    width: 100%;
 }
 
 .hero-title {
@@ -207,6 +278,170 @@ html {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
+}
+
+/* Featured Game Banner in Hero */
+.hero-featured-game {
+    margin-top: var(--spacing-4xl);
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured-game-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 100%);
+    border: 3px solid #10b981;
+    border-radius: 20px;
+    padding: var(--spacing-2xl);
+    display: flex;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    box-shadow: 0 15px 50px rgba(16, 185, 129, 0.3), 0 0 30px rgba(16, 185, 129, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    transition: left 0.8s ease;
+    z-index: 1;
+}
+
+.featured-game-card:hover::before {
+    left: 100%;
+}
+
+.featured-game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.3);
+    border-color: #059669;
+}
+
+.featured-game-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid #10b981;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.featured-game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.featured-game-card:hover .featured-game-image img {
+    transform: scale(1.1);
+}
+
+.featured-game-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.featured-game-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.featured-game-badge i {
+    font-size: var(--font-size-lg);
+}
+
+.featured-game-title {
+    font-size: var(--font-size-4xl);
+    color: #10b981;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.featured-game-description {
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+}
+
+.featured-game-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.btn-featured {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: var(--font-size-sm);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-play-store {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-play-store:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.btn-developer {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.3) 100%);
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.btn-developer:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-featured i {
+    font-size: var(--font-size-lg);
 }
 
 /* Pixel Title Style */
@@ -339,6 +574,25 @@ section::before {
     margin-bottom: var(--spacing-2xl);
 }
 
+/* Featured grid for Play Store section - single card, normal size */
+.projects-grid-featured {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+@media (min-width: 769px) {
+    .projects-grid-featured {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid-featured {
+        max-width: 100%;
+    }
+}
+
 .project-card {
     background: linear-gradient(135deg, rgba(51, 65, 85, 0.9) 0%, rgba(71, 85, 105, 0.9) 100%);
     border: 2px solid #3b82f6;
@@ -380,6 +634,48 @@ section::before {
 .project-card.featured {
     border-color: var(--accent-success);
     box-shadow: 0 0 15px rgba(224, 224, 224, 0);
+}
+
+/* Featured Play Store Card */
+.project-card.featured-playstore {
+    border-color: #10b981;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+    position: relative;
+}
+
+.project-card.featured-playstore:hover {
+    border-color: #059669;
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.playstore-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    z-index: 3;
+}
+
+.playstore-badge i {
+    font-size: 14px;
+}
+
+.featured-tag {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 }
 
 /* Green border for special projects */
@@ -1543,6 +1839,10 @@ section::before {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
+    }
+    
+    .projects-grid-featured {
+        max-width: 100% !important;
     }
     
     .project-card {
