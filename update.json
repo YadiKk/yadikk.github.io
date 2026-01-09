@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.0.8",
-  "criticalVersion": "1.0.7",
+  "latestVersion": "1.1.2",
+  "criticalVersion": "1.1.1",
   "changelog": "Added new airplane model with enhanced aerodynamics, implemented smoother flight controls with improved responsiveness, and optimized performance for better frame rates across all devices.",
-  "releaseDate": "2025-11-09",
+  "releaseDate": "2025-11-25",
   "forceUpdateMessage": "Please update to the latest version to access new features and critical stability improvements."
 }
